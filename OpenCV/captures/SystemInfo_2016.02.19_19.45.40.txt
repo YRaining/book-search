@@ -1,0 +1,48 @@
+Applications Memory Usage (kB):
+Uptime: 5153099 Realtime: 5153099
+
+** MEMINFO in pid 28102 [com.example.jhon.opencv] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap     3430     3328        0        0    16384    13838     2545
+  Dalvik Heap    10985    10928        0        0    14263    10932     3331
+ Dalvik Other      365      364        0        0                           
+        Stack      120      120        0        0                           
+       Ashmem        2        0        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap     2482      328     1096        0                           
+    .apk mmap      198        0       16        0                           
+    .ttf mmap       45        0        0        0                           
+    .dex mmap     2048        4     2044        0                           
+    .oat mmap     1242        0      112        0                           
+    .art mmap     1034      484        0        0                           
+   Other mmap      160        8       56        0                           
+      Unknown      745      744        0        0                           
+        TOTAL    22860    16308     3328        0    30647    24770     5876
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:    11412
+         Native Heap:     3328
+                Code:     3600
+               Stack:      120
+            Graphics:        0
+       Private Other:     1176
+              System:     3224
+ 
+               TOTAL:    22860      TOTAL SWAP (KB):        0
+ 
+ Objects
+               Views:       19         ViewRootImpl:        1
+         AppContexts:        2           Activities:        1
+              Assets:        2        AssetManagers:        2
+       Local Binders:        9        Proxy Binders:       15
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
