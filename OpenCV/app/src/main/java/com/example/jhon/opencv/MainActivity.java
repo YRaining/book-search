@@ -37,10 +37,6 @@ public class MainActivity extends AppCompatActivity {
         txt=(TextView)findViewById(R.id.textview);
         img=(ImageView)findViewById(R.id.img);
         button=(Button)findViewById(R.id.button);
-        //BitmapFactory.Options options=new BitmapFactory.Options();
-        //options.inSampleSize=9;
-        //final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.python_cv, options);
-        //img.setImageBitmap(bitmap);
 
         verifyStoragePermissions(this);
         
@@ -51,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 Uri imageUri = Uri.fromFile(getTempImage());
                 capIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
                 startActivityForResult(capIntent, 100);
-                /*Bitmap result = Bitmap.createBitmap(w,h, Bitmap.Config.ARGB_8888);
-                result.setPixels(resultPixes, 0, w, 0, 0, w, h);
-                img.setImageBitmap(result);*/
             }
         });
     }
