@@ -108,57 +108,5 @@ JNIEXPORT jstring JNICALL Java_com_example_jhon_opencv_OpenCVHelper_gray(
 
      jstring  result=env->NewStringUTF((const char*)matchbook.c_str());
      return result;
-    /*jint *cbuf, *dbuf;
-    cbuf = env->GetIntArrayElements(buf, (jboolean*) false);
-    if(cbuf == NULL) {
-        return 0;
-    }
-
-    Mat srcImg(h, w, CV_8UC4, (unsigned char*)cbuf);
-    Mat grayImg(h, w, CV_8UC1);
-    Mat dstImg(h, w, CV_8UC4);
-
-    int para = 2;
-    int lowThreshold = para / 2;
-    int ratio = 3;
-
-    cvtColor(srcImg, grayImg, COLOR_BGR2GRAY);
-   // blur(grayImg, grayImg, Size(3,3));
-   // Canny(grayImg, grayImg, lowThreshold, lowThreshold*ratio, 3);
-    cvtColor(grayImg, dstImg, COLOR_GRAY2BGRA);
-    //add(srcImg, dstImg, dstImg);
-
-    dbuf = (jint*)dstImg.ptr(0);
-    int size=w * h;
-    jintArray result = env->NewIntArray(size);
-    env->SetIntArrayRegion(result, 0, size, dbuf);
-    env->ReleaseIntArrayElements(buf, cbuf, 0);
-    return result;*/
-
-   /* jint *cbuf,*dbuf;
-    cbuf = env->GetIntArrayElements(buf, JNI_FALSE );
-    if (cbuf == NULL) {
-        return 0;
-    }
-
-    Mat imgData(h, w, CV_8UC4, (unsigned char *) cbuf);
-    Mat img2(h,w,CV_8UC1);
-    cvtColor(imgData,imgData,CV_RGBA2GRAY);
-    dbuf=(jint*)img2.ptr(0);
-    /* uchar* ptr = imgData.ptr(100);
-    for(int i = 0; i < w*(h-100); i ++){
-         //计算公式：Y(亮度) = 0.299*R + 0.587*G + 0.114*B
-         //对于一个int四字节，其彩色值存储方式为：BGRA
-         int grayScale = (int)(ptr[4*i+2]*0.299 + ptr[4*i+1]*0.587 + ptr[4*i+0]*0.114);
-         ptr[4*i+1] = grayScale;
-         ptr[4*i+2] = grayScale;
-         ptr[4*i+0] = grayScale;
-     }
-    log.v(dbuf);
-    int size = w * h;
-    jintArray result = env->NewIntArray(size);
-    env->SetIntArrayRegion(result, 0, size, cbuf);
-    env->ReleaseIntArrayElements(buf, cbuf, 0);
-    return result;*/
 }
 }
