@@ -70,10 +70,9 @@ public class InfoShow extends AppCompatActivity {
 
         Intent intent=getIntent();
         String bookNum=intent.getStringExtra("bookNum");
-        // Toast.makeText(getApplicationContext(), bookNum,
-        //Toast.LENGTH_SHORT).show();
-
+      
         verifyStoragePermissions(this);
+        
         File sdCardDir = Environment.getExternalStorageDirectory();
         BitmapFactory.Options opts=new BitmapFactory.Options();
         opts.inSampleSize=1;
@@ -106,9 +105,7 @@ public class InfoShow extends AppCompatActivity {
 
         mData = getData();
         MyAdapter adapter = new MyAdapter(this);
-        //setListAdapter(adapter);
         list.setAdapter(adapter);
-
     }
 
     private List<Map<String, Object>> getData() {
@@ -116,37 +113,28 @@ public class InfoShow extends AppCompatActivity {
 
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("price",  bookPriceStr[0]);
-        //map.put("info", "google 1");
         map.put("img", R.drawable.j1);
         list.add(map);
 
         map = new HashMap<String, Object>();
         map.put("price", bookPriceStr[1]);
-        //map.put("info", "google 2");
         map.put("img", R.drawable.j2);
         list.add(map);
 
         map = new HashMap<String, Object>();
         map.put("price", bookPriceStr[2]);
-        // map.put("info", "google 3");
         map.put("img", R.drawable.j3);
         list.add(map);
 
         return list;
     }
 
-    /*@Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-
-        Log.v("MyListView4-click", (String) mData.get(position).get("title"));
-    }*/
+    
 
     public final class ViewHolder{
         public ImageView img;
         public TextView price;
-        //public TextView info;
         public Button viewBtn;
-        // public ImageButton viewBtn;
     }
 
     public void showInfo(int storeNum,String price){
