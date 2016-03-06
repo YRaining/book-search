@@ -43,27 +43,7 @@ public class MainActivity extends AppCompatActivity {
         //img.setImageBitmap(bitmap);
 
         verifyStoragePermissions(this);
-        /*File sdCardDir = Environment.getExternalStorageDirectory();
-        String tmp=sdCardDir.toString();
-        //txt.setText(tmp);
-        StringBuilder sb = new StringBuilder("");
-        try{
-            FileInputStream fis = new FileInputStream(sdCardDir.getCanonicalPath() +"/test.txt");
-            BufferedReader br = new BufferedReader(new
-                                         InputStreamReader(fis));
-
-                            String line = null;
-                            while((line = br.readLine()) != null) {
-                                    sb.append(line);
-                            }
-
-            }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-
-        txt.setText(sb.toString());
-*/
+        
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
